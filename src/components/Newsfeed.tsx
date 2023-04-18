@@ -1,3 +1,4 @@
+import * as React from "react";
 import Story from "./Story";
 import { graphql } from "relay-runtime";
 import { useFragment } from "react-relay";
@@ -7,6 +8,7 @@ import { NewsfeedFragment$key } from "./__generated__/NewsfeedFragment.graphql";
 const NewsfeedFragment = graphql`
   fragment NewsfeedFragment on Query {
     topStories {
+      id
       ...StoryFragment
     }
   }
@@ -18,8 +20,8 @@ export default function Newsfeed({ props }: { props: NewsfeedFragment$key }) {
 
   return (
     <div className="newsfeed">
-      {stories?.map((story, idx) => (
-        <Story story={story} key={idx} />
+      {stories?.map((story) => (
+        <Story story={story} key={story.id} />
       ))}
     </div>
   );

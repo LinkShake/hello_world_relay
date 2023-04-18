@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<3a43bb7bd3ae64f0b6b56c7479a7eaf4>>
+ * @generated SignedSource<<51fb2fb2e848f1cfb1f453bdde5c8634>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -27,19 +27,19 @@ var v0 = {
   "alias": null,
   "args": null,
   "kind": "ScalarField",
-  "name": "__typename",
+  "name": "id",
   "storageKey": null
 },
 v1 = {
-  "kind": "TypeDiscriminator",
-  "abstractKey": "__isActor"
-},
-v2 = {
   "alias": null,
   "args": null,
   "kind": "ScalarField",
-  "name": "id",
+  "name": "__typename",
   "storageKey": null
+},
+v2 = {
+  "kind": "TypeDiscriminator",
+  "abstractKey": "__isActor"
 },
 v3 = {
   "alias": null,
@@ -108,6 +108,7 @@ return {
         "name": "topStories",
         "plural": true,
         "selections": [
+          (v0/*: any*/),
           {
             "alias": null,
             "args": null,
@@ -137,9 +138,9 @@ return {
             "name": "poster",
             "plural": false,
             "selections": [
-              (v0/*: any*/),
               (v1/*: any*/),
               (v2/*: any*/),
+              (v0/*: any*/),
               (v3/*: any*/),
               {
                 "alias": null,
@@ -203,8 +204,7 @@ return {
               (v4/*: any*/)
             ],
             "storageKey": null
-          },
-          (v2/*: any*/)
+          }
         ],
         "storageKey": null
       },
@@ -224,7 +224,7 @@ return {
             "name": "actor",
             "plural": false,
             "selections": [
-              (v0/*: any*/),
+              (v1/*: any*/),
               (v3/*: any*/),
               {
                 "alias": null,
@@ -238,7 +238,7 @@ return {
                 ],
                 "storageKey": null
               },
-              (v2/*: any*/)
+              (v0/*: any*/)
             ],
             "storageKey": null
           },
@@ -256,9 +256,9 @@ return {
             "name": "contacts",
             "plural": true,
             "selections": [
+              (v1/*: any*/),
               (v0/*: any*/),
               (v2/*: any*/),
-              (v1/*: any*/),
               (v3/*: any*/),
               {
                 "alias": null,
@@ -282,12 +282,12 @@ return {
     ]
   },
   "params": {
-    "cacheID": "41932e3a763087f3f5ae74d56cb7df04",
+    "cacheID": "fbac898f63e823bc831ffa663fb035a3",
     "id": null,
     "metadata": {},
     "name": "AppQuery",
     "operationKind": "query",
-    "text": "query AppQuery {\n  ...NewsfeedFragment\n  viewer {\n    ...SidebarFragment\n  }\n}\n\nfragment ContactRowFragment on Actor {\n  __isActor: __typename\n  name\n  profilePicture {\n    ...ImageFragment\n  }\n}\n\nfragment ContactsListFragment on Viewer {\n  contacts(search: \"S\") {\n    __typename\n    id\n    ...ContactRowFragment\n  }\n}\n\nfragment ImageFragment on Image {\n  url\n  altText\n}\n\nfragment ImageFragment_1YYarZ on Image {\n  url(width: 400, height: 400)\n  altText\n}\n\nfragment ImageFragment_3XLoCc on Image {\n  url(width: 60, height: 60)\n  altText\n}\n\nfragment NewsfeedFragment on Query {\n  topStories {\n    ...StoryFragment\n    id\n  }\n}\n\nfragment PosterBylineFragment on Actor {\n  __isActor: __typename\n  id\n  name\n  profilePicture {\n    ...ImageFragment_3XLoCc\n  }\n}\n\nfragment SidebarFragment on Viewer {\n  ...ViewerProfileFragment\n  ...ContactsListFragment\n}\n\nfragment StoryFragment on Story {\n  title\n  summary\n  createdAt\n  poster {\n    __typename\n    ...PosterBylineFragment\n    id\n  }\n  thumbnail {\n    ...ImageFragment_1YYarZ\n  }\n}\n\nfragment ViewerProfileFragment on Viewer {\n  actor {\n    __typename\n    name\n    profilePicture {\n      url\n    }\n    id\n  }\n}\n"
+    "text": "query AppQuery {\n  ...NewsfeedFragment\n  viewer {\n    ...SidebarFragment\n  }\n}\n\nfragment ContactRowFragment on Actor {\n  __isActor: __typename\n  name\n  profilePicture {\n    ...ImageFragment\n  }\n}\n\nfragment ContactsListFragment on Viewer {\n  contacts(search: \"S\") {\n    __typename\n    id\n    ...ContactRowFragment\n  }\n}\n\nfragment ImageFragment on Image {\n  url\n  altText\n}\n\nfragment ImageFragment_1YYarZ on Image {\n  url(width: 400, height: 400)\n  altText\n}\n\nfragment ImageFragment_3XLoCc on Image {\n  url(width: 60, height: 60)\n  altText\n}\n\nfragment NewsfeedFragment on Query {\n  topStories {\n    id\n    ...StoryFragment\n  }\n}\n\nfragment PosterBylineFragment on Actor {\n  __isActor: __typename\n  id\n  name\n  profilePicture {\n    ...ImageFragment_3XLoCc\n  }\n}\n\nfragment SidebarFragment on Viewer {\n  ...ViewerProfileFragment\n  ...ContactsListFragment\n}\n\nfragment StoryFragment on Story {\n  id\n  title\n  summary\n  createdAt\n  poster {\n    __typename\n    ...PosterBylineFragment\n    id\n  }\n  thumbnail {\n    ...ImageFragment_1YYarZ\n  }\n}\n\nfragment ViewerProfileFragment on Viewer {\n  actor {\n    __typename\n    name\n    profilePicture {\n      url\n    }\n    id\n  }\n}\n"
   }
 };
 })();

@@ -5,6 +5,7 @@ import "./style.css";
 import App from "./components/App";
 import GraphiQL from "./components/playground/GraphiQL";
 import RelayEnvironment from "./relay/RelayEnvironment";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 function Routes() {
   if (window.location.pathname === "/playground") {
@@ -12,7 +13,11 @@ function Routes() {
   }
   return (
     <RelayEnvironment>
-      <App />
+      <React.Suspense fallback={<LoadingSpinner />}>
+        <div className="app">
+          <App />
+        </div>
+      </React.Suspense>
     </RelayEnvironment>
   );
 }
