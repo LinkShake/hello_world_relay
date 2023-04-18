@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<51fb2fb2e848f1cfb1f453bdde5c8634>>
+ * @generated SignedSource<<5e4f66c93928bc55366950440481505b>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -244,13 +244,7 @@ return {
           },
           {
             "alias": null,
-            "args": [
-              {
-                "kind": "Literal",
-                "name": "search",
-                "value": "S"
-              }
-            ],
+            "args": null,
             "concreteType": null,
             "kind": "LinkedField",
             "name": "contacts",
@@ -274,7 +268,7 @@ return {
                 "storageKey": null
               }
             ],
-            "storageKey": "contacts(search:\"S\")"
+            "storageKey": null
           }
         ],
         "storageKey": null
@@ -282,12 +276,12 @@ return {
     ]
   },
   "params": {
-    "cacheID": "fbac898f63e823bc831ffa663fb035a3",
+    "cacheID": "e08c12c38d582626d6a211dceaf720af",
     "id": null,
     "metadata": {},
     "name": "AppQuery",
     "operationKind": "query",
-    "text": "query AppQuery {\n  ...NewsfeedFragment\n  viewer {\n    ...SidebarFragment\n  }\n}\n\nfragment ContactRowFragment on Actor {\n  __isActor: __typename\n  name\n  profilePicture {\n    ...ImageFragment\n  }\n}\n\nfragment ContactsListFragment on Viewer {\n  contacts(search: \"S\") {\n    __typename\n    id\n    ...ContactRowFragment\n  }\n}\n\nfragment ImageFragment on Image {\n  url\n  altText\n}\n\nfragment ImageFragment_1YYarZ on Image {\n  url(width: 400, height: 400)\n  altText\n}\n\nfragment ImageFragment_3XLoCc on Image {\n  url(width: 60, height: 60)\n  altText\n}\n\nfragment NewsfeedFragment on Query {\n  topStories {\n    id\n    ...StoryFragment\n  }\n}\n\nfragment PosterBylineFragment on Actor {\n  __isActor: __typename\n  id\n  name\n  profilePicture {\n    ...ImageFragment_3XLoCc\n  }\n}\n\nfragment SidebarFragment on Viewer {\n  ...ViewerProfileFragment\n  ...ContactsListFragment\n}\n\nfragment StoryFragment on Story {\n  id\n  title\n  summary\n  createdAt\n  poster {\n    __typename\n    ...PosterBylineFragment\n    id\n  }\n  thumbnail {\n    ...ImageFragment_1YYarZ\n  }\n}\n\nfragment ViewerProfileFragment on Viewer {\n  actor {\n    __typename\n    name\n    profilePicture {\n      url\n    }\n    id\n  }\n}\n"
+    "text": "query AppQuery {\n  ...NewsfeedFragment\n  viewer {\n    ...SidebarFragment\n  }\n}\n\nfragment ContactRowFragment on Actor {\n  __isActor: __typename\n  name\n  profilePicture {\n    ...ImageFragment\n  }\n}\n\nfragment ContactsListFragment on Viewer {\n  contacts {\n    __typename\n    id\n    ...ContactRowFragment\n  }\n}\n\nfragment ImageFragment on Image {\n  url\n  altText\n}\n\nfragment ImageFragment_1YYarZ on Image {\n  url(width: 400, height: 400)\n  altText\n}\n\nfragment ImageFragment_3XLoCc on Image {\n  url(width: 60, height: 60)\n  altText\n}\n\nfragment NewsfeedFragment on Query {\n  topStories {\n    id\n    ...StoryFragment\n  }\n}\n\nfragment PosterBylineFragment on Actor {\n  __isActor: __typename\n  id\n  name\n  profilePicture {\n    ...ImageFragment_3XLoCc\n  }\n}\n\nfragment SidebarFragment on Viewer {\n  ...ViewerProfileFragment\n  ...ContactsListFragment\n}\n\nfragment StoryFragment on Story {\n  id\n  title\n  summary\n  createdAt\n  poster {\n    __typename\n    ...PosterBylineFragment\n    id\n  }\n  thumbnail {\n    ...ImageFragment_1YYarZ\n  }\n}\n\nfragment ViewerProfileFragment on Viewer {\n  actor {\n    __typename\n    name\n    profilePicture {\n      url\n    }\n    id\n  }\n}\n"
   }
 };
 })();
