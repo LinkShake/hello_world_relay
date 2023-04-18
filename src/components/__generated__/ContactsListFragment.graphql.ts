@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<f3018d181e3b49d90119aef8009b37eb>>
+ * @generated SignedSource<<901b9b32728a953f00c87a844bba00db>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -8,7 +8,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { ReaderFragment, RefetchableFragment } from 'relay-runtime';
+import { Fragment, ReaderFragment } from 'relay-runtime';
 import { FragmentRefs } from "relay-runtime";
 export type ContactsListFragment$data = {
   readonly contacts: ReadonlyArray<{
@@ -23,32 +23,18 @@ export type ContactsListFragment$key = {
 };
 
 const node: ReaderFragment = {
-  "argumentDefinitions": [
-    {
-      "defaultValue": null,
-      "kind": "LocalArgument",
-      "name": "search"
-    }
-  ],
+  "argumentDefinitions": [],
   "kind": "Fragment",
-  "metadata": {
-    "refetch": {
-      "connection": null,
-      "fragmentPathInResult": [
-        "viewer"
-      ],
-      "operation": require('./ContactsListRefetchQuery.graphql')
-    }
-  },
+  "metadata": null,
   "name": "ContactsListFragment",
   "selections": [
     {
       "alias": null,
       "args": [
         {
-          "kind": "Variable",
+          "kind": "Literal",
           "name": "search",
-          "variableName": "search"
+          "value": "S"
         }
       ],
       "concreteType": null,
@@ -69,13 +55,13 @@ const node: ReaderFragment = {
           "name": "ContactRowFragment"
         }
       ],
-      "storageKey": null
+      "storageKey": "contacts(search:\"S\")"
     }
   ],
   "type": "Viewer",
   "abstractKey": null
 };
 
-(node as any).hash = "a58a5b12c5813e115be4ed129437cb3a";
+(node as any).hash = "f5dadc70f4d7c87450aa2009ac3e7298";
 
 export default node;

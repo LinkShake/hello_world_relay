@@ -11,7 +11,7 @@ export type Props = {
 
 const ContactsListFragment = graphql`
   fragment ContactsListFragment on Viewer {
-    contacts {
+    contacts(search: "S") {
       id
       ...ContactRowFragment
     }
